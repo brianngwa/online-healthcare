@@ -1,38 +1,109 @@
-.App {
-  text-align: center;
-}
+@import url("https://fonts.googleapis.com/css2?family=Kalam&family=Roboto+Condensed:wght@300;400&display=swap");
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Condensed", sans-serif;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a {
+  text-decoration: none;
+  color: black;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Hospitals section */
+.hospitals {
+  max-width: 70%;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+  border-bottom: 10px solid rgb(96, 134, 39);
+  transition: 0.3s ease transform;
+  cursor: pointer;
+}
+.hospitals:hover {
+  transform: scale(1.01);
+}
+#map {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  /* flex-basis: 0.5%; */
+  align-items: flex-end;
+  /* justify-content: flex-end; */
+}
+
+#mapImg {
+  align-self: center;
+}
+#mapInfo {
+  align-self: center;
+}
+
+p {
+  font-weight: 600;
+  margin-top: 10px;
+  padding: 10px;
+}
+input[type="text"],
+select {
+  width: 70%;
+  padding: 12px 20px;
+  margin: 8px 10px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.green {
+  width: 70%;
+  background-color: #4caf50;
   color: white;
+  padding: 14px 20px;
+  margin: 8px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+input[type="submit"]:hover {
+  background-color: #45a049;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/*End of Hospitals section */
+
+/* About section */
+#about .about {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 50px;
 }
+#about .content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+#about .content p {
+  margin-left: 20px;
+  /* font-size: 2rem; */
+}
+#about .about h1 {
+  color: #3c84a0;
+}
+#about .card {
+  display: flex;
+  margin-top: 40px;
+}
+#about .card-bottom {
+  margin: 30px 0 30px 0;
+}
+#about .card-bottom h2 {
+  letter-spacing: 0.1rem;
+}
+#about .card-item img {
+  transition: 0.3s ease transform;
+}
+#about .card-item:hover img {
+  transform: scale(1.1);
+}
+/* End of about section */
